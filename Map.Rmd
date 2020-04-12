@@ -1,0 +1,20 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE)
+```
+## Map
+
+### Date: "4/12/2020"
+```{r, echo=FALSE, comment=""}
+library(leaflet)
+set.seed(2016-04-25)
+df <- data.frame(lat = runif(20, min = 39.2, max = 39.3), lng = runif(20, min= -76.6, max = -76.5))
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+```
+
+  
+
